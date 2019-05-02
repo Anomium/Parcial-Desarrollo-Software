@@ -1,0 +1,16 @@
+use BaseDatos;
+
+create table persona (
+	
+Id int primary key auto_increment,
+
+    nombre varchar(30),
+
+    lname varchar(30),
+
+    email varchar(30),
+
+    lp varchar(30),
+
+    hob varchar(30)
+);

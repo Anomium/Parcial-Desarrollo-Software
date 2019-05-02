@@ -68,14 +68,18 @@ public class Controlador extends HttpServlet {
             
             String nom = request.getParameter("txtNombre");
             String ape = request.getParameter("txtApellido");
-            String email = request.getParameter("txtCumple");
+            String email = request.getParameter("txtEmail");
             String lp = request.getParameter("cmbxLp");
-            String hob = request.getParameterValues("cb").toString();
+            String[] hob = request.getParameterValues("cb");
+            String hobc = "";
+            for (int i = 0; i < hob.length; i++) {
+                hobc = hobc + hob[i];
+            }
             p.setNom(nom);
             p.setLname(ape);
             p.setEmail(email);
             p.setLP(lp);
-            p.setHob(hob);
+            p.setHob(hobc);
             dao.add(p);
             acceso = listar;
             
@@ -88,7 +92,7 @@ public class Controlador extends HttpServlet {
             String ape = request.getParameter("txtApellido");
             String email = request.getParameter("txtEmail");
             String lp = request.getParameter("cmbxLp");
-            String hob = request.getParameter("cb");
+            String hob = request.getParameterValues("cb").toString();
             p.setId(id);
             p.setNom(nom);
             p.setLname(ape);

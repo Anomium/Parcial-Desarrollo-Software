@@ -68,7 +68,7 @@ public class PersonaDAO implements CRUD{
         
         try {
             con = cn.getConnection();
-            String sql = "insert into personas.persona(nombre, lname, email, lp, hob) values ('"+per.getNom()+"','"+per.getLname()+"','"+per.getEmail()+"','"+per.getLP()+"','"+per.getHob()+"')";
+            String sql = "insert into basedatos.persona(nombre, lname, email, lp, hob) values ('"+per.getNom()+"','"+per.getLname()+"','"+per.getEmail()+"','"+per.getLP()+"','"+per.getHob()+"')";
             //"+per.getId()+",'"+per.getNom()+"','"+per.getApe()+"','"+per.getBirthDay()+"'
             ps = con.prepareStatement(sql);
             ps.executeUpdate();

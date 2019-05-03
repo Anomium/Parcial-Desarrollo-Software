@@ -8,8 +8,8 @@ public class Conexion {
     
     public Conexion() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/basedatos", "root", "estudiante");
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/basedatos?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "123456");
         } catch (Exception e) {
             System.err.println("Conexion Error " + e);
         }

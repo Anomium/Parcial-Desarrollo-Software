@@ -52,6 +52,7 @@ public class PersonaDAO implements CRUD{
             while(rs.next()){                
                 p.setId(rs.getInt("Id"));
                 p.setNom(rs.getString("nombre"));
+                p.setLname(rs.getString("lname"));
                 p.setEmail(rs.getString("email"));
                 p.setLP(rs.getString("lp"));
                 p.setHob(rs.getString("hob"));
